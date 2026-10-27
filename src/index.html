@@ -29,96 +29,86 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
 
-    <section id="hero-143">
+    <section id="hero-1803" aria-labelledby="hero-title">
         <div class="cs-container">
-            <span class="cs-topper">Hand-Coded, Hand-Crafted</span>
-            <h1 class="cs-title">
-                Small Business Web Designer
-            </h1>
-            <p class="cs-text">
-				No Website builders or Wordpress Sites. 100% Hand-Coded and Hand-Crafted business websites with $0 down, monthly pricing $175/month as well as Google Ads and SEO Services.
-            </p>
-            <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+            <div class="cs-content">
+                <span class="cs-topper">Small business. Big possibilities.</span>
+                <h1 id="hero-title" class="cs-title">A better website.<br>A <span class="cs-title-accent">bigger future.</span></h1>
+                <p class="cs-text">
+                    You built a great business. Let’s give it a website to match.
+                    Custom-designed, hand-coded websites that help you stand out,
+                    connect with customers, and grow.
+                </p>
+                <div class="cs-button-group">
+                    <a href="/contact/" class="cs-button-solid">
+                        Let’s Build Your Website
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#gallery-48" class="cs-work-link">Explore our work <span aria-hidden="true">↗</span></a>
+                </div>
+                <p class="cs-pricing"><strong>$0 down. $175/month.</strong> We handle the website. You run the business.</p>
+            </div>
+
+            <!-- A lightweight, code-built computer with a sample website. -->
+            <figure class="cs-visual" role="img" aria-label="Desktop computer displaying a custom home renovation website, with a matching mobile preview.">
+                <div class="cs-visual-art" aria-hidden="true">
+                    <div class="cs-orbit"></div>
+                    <span class="cs-spark cs-spark-one">✦</span>
+                    <span class="cs-spark cs-spark-two">✦</span>
+                    <div class="cs-monitor">
+                        <div class="cs-monitor-frame">
+                            <div class="cs-browser-bar">
+                                <span class="cs-browser-dots"><i></i><i></i><i></i></span>
+                                <span class="cs-browser-address">yourbusiness.com</span>
+                                <span class="cs-browser-menu">•••</span>
+                            </div>
+                            <div class="cs-demo-site">
+                                <div class="cs-demo-nav">
+                                    <span class="cs-demo-logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="m3 11 9-8 9 8M6 9v12h12V9M10 21v-7h4v7" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>HAVEN<span>HOME &amp; LIVING</span></span>
+                                    <span class="cs-demo-links">Our story &nbsp; Services &nbsp; Our work</span>
+                                    <span class="cs-demo-contact">Let’s talk ↗</span>
+                                </div>
+                                <div class="cs-demo-hero">
+                                    <div class="cs-demo-copy">
+                                        <span class="cs-demo-eyebrow">THOUGHTFULLY CRAFTED HOMES</span>
+                                        <span class="cs-demo-heading">Good spaces.<br>Better living.</span>
+                                        <span class="cs-demo-text">Beautiful, considered renovations.<br>Made for the way you live.</span>
+                                        <span class="cs-demo-button">Find your inspiration &nbsp; ↗</span>
+                                    </div>
+                                    <picture class="cs-demo-photo">
+                                        <source srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 700, height: 800 }) | webp %}" type="image/webp">
+                                        <img src="{% getUrl '/assets/images/landing.jpg' | resize({ width: 700, height: 800 }) | jpeg %}" alt="" width="700" height="800" loading="eager" decoding="async">
+                                    </picture>
+                                </div>
+                                <div class="cs-demo-footer"><span>Designed with care.</span><span>Built around you. <span>✳</span></span></div>
+                            </div>
+                        </div>
+                        <div class="cs-monitor-chin"><span></span></div>
+                        <div class="cs-monitor-stand"></div>
+                        <div class="cs-monitor-base"></div>
+                    </div>
+                    <div class="cs-phone">
+                        <div class="cs-phone-speaker"></div>
+                        <span class="cs-phone-logo">HAVEN <span>☰</span></span>
+                        <div class="cs-phone-photo"><img src="{% getUrl '/assets/images/landing.jpg' | resize({ width: 700, height: 800 }) | webp %}" alt="" width="700" height="800" decoding="async"></div>
+                        <div class="cs-phone-copy"><span>Good spaces.<br>Better living.</span><span class="cs-phone-line"></span><span class="cs-phone-line"></span><span class="cs-phone-button">Explore our work ↗</span></div>
+                    </div>
+                    <div class="cs-code-note"><span>&lt;/&gt;</span> Hand-coded. Made for you.</div>
+                </div>
+                <figcaption>YOUR BUSINESS, LOOKING ITS BEST.</figcaption>
+            </figure>
         </div>
-
-        <!-- Background Image -->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Large Tablet Image-->
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Services                   -->
-    <!-- ============================================ -->
-
-    <section id="h-services-143">
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Full Kitchen Remodel
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Exterior Repairs
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Utility Maintenance
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Design Consultation
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
+        <ul class="cs-benefits" aria-label="Included with your website">
+            <li><span class="cs-benefit-icon" aria-hidden="true">✳</span><span><strong>Designed just for you</strong><span>As unique as your business</span></span></li>
+            <li><svg class="cs-benefit-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m18 3-11 15h8l-1 11 11-16h-8l1-10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span><strong>Built to perform</strong><span>Fast, responsive, hand-coded</span></span></li>
+            <li><svg class="cs-benefit-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 18v-4a10 10 0 0 1 20 0v4M6 15H4v8h5v-8H6Zm20 0h2v8h-5v-8h3Zm0 8v3h-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>A real person in your corner</strong><span>Personal support, every step</span></span></li>
         </ul>
     </section>
+
 
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
