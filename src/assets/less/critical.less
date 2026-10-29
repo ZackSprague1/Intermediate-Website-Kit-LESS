@@ -8,7 +8,7 @@
     #hero-1803 {
         --hero-ink: #142c35;
         --hero-accent: #ff986c;
-        padding: 11.5rem 1.25rem 4.5rem;
+        padding: 13rem 1.25rem 4.5rem;
         background: var(--hero-ink);
         color: #fffaf2;
         position: relative;
@@ -219,11 +219,24 @@
         }
 
         .cs-monitor-frame {
-            padding: 0.7em;
-            border: 1px solid #576167;
+            padding: 0.85em 0.7em 0.7em;
+            position: relative;
+            border: 1px solid #758085;
             border-bottom: 0;
-            border-radius: 1em 1em 0 0;
-            background: #1c2428;
+            border-radius: 0.75em 0.75em 0 0;
+            background: linear-gradient(135deg, #303538, #080b0d 55%, #202629);
+            box-shadow: inset 0 0 0 0.1em #101416, 0 0 0 0.07em #8c969a;
+        }
+
+        .cs-monitor-camera {
+            width: 0.22em;
+            height: 0.22em;
+            position: absolute;
+            top: 0.3em;
+            left: calc(50% - 0.11em);
+            border-radius: 50%;
+            background: #182d39;
+            box-shadow: inset 0 0 0 0.06em #080b0d;
         }
 
         .cs-browser-bar {
@@ -241,73 +254,103 @@
         .cs-browser-dots {
             display: flex;
             gap: 0.25em;
-            i { width: 0.32em; height: 0.32em; background: #b7bdb7; border-radius: 50%; }
-            i:first-child { background: #dc9b87; }
+            i { width: 0.32em; height: 0.32em; background: #28c840; border-radius: 50%; }
+            i:first-child { background: #ff5f57; }
+            i:nth-child(2) { background: #febc2e; }
         }
         .cs-browser-address { width: 60%; padding: 0.2em; border-radius: 0.2em; background: #fff; text-align: center; font-size: 0.45em; }
         .cs-browser-menu { font-size: 0.6em; letter-spacing: 0.1em; }
 
-        .cs-demo-site { background: #f8f7f0; color: #294b40; }
-        .cs-demo-nav { min-height: 3.5em; padding: 0.75em 1.3em; display: flex; align-items: center; justify-content: space-between; gap: 0.5em; }
-        .cs-demo-logo {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            align-items: center;
-            column-gap: 0.3em;
-            font-family: Georgia, serif;
-            font-size: 0.95em;
-            letter-spacing: 0.1em;
-            svg { width: 1.5em; height: 1.5em; grid-row: span 2; }
-            span { font-family: var(--bodyFont); font-size: 0.28em; letter-spacing: 0.2em; }
-        }
-        .cs-demo-links { font-size: 0.42em; }
-        .cs-demo-contact { padding: 0.65em 0.9em; border: 1px solid #aab6a7; font-size: 0.45em; }
-        .cs-demo-hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 15em; }
-        .cs-demo-copy { padding: 2.6em 0.75em 2em 1.75em; display: flex; flex-direction: column; align-items: flex-start; }
-        .cs-demo-eyebrow { margin-bottom: 1.6em; font-size: 0.36em; font-weight: 700; letter-spacing: 0.14em; }
-        .cs-demo-heading { margin-bottom: 0.45em; font-family: Georgia, serif; font-size: 2.2em; line-height: 1.08; letter-spacing: -0.04em; }
-        .cs-demo-text { font-size: 0.5em; line-height: 1.7; color: #657568; }
-        .cs-demo-button { margin-top: 1.7em; padding: 0.9em 1.2em; background: #294b40; color: #fff; font-size: 0.46em; }
-        .cs-demo-photo {
-            position: relative;
+        .cs-monitor-screen {
+            aspect-ratio: 16 / 9;
             overflow: hidden;
-            img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; }
+            background: var(--hero-ink);
+
+            img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: top; }
         }
-        .cs-demo-footer { padding: 1.2em 1.75em; display: flex; justify-content: space-between; align-items: center; background: #dfe5d7; font-family: Georgia, serif; font-size: 0.75em; }
-        .cs-demo-footer > span:last-child { display: flex; align-items: center; gap: 1.5em; }
-        .cs-demo-footer span span { font-size: 1.7em; }
 
         .cs-monitor-chin {
-            height: 2.2em;
+            height: 2.9em;
             display: grid;
             place-items: center;
-            border-radius: 0 0 0.8em 0.8em;
-            background: linear-gradient(100deg, #a5afb0, #e2e6e5 55%, #abb5b6);
-            span { width: 0.45em; height: 0.45em; border: 1px solid #7c8b8c; border-radius: 50%; }
+            border: 1px solid #a4adb1;
+            border-radius: 0 0 0.65em 0.65em;
+            background: linear-gradient(110deg, #9ca7ac, #e6eaec 45%, #bdc7cc 75%, #99a5ab);
+            box-shadow: inset 0 0.1em 0 #e7edef, inset 0 -0.1em 0 #8d989e;
+            span { font-size: 0.8em; font-weight: 500; letter-spacing: -0.04em; color: #667278; text-shadow: 0 1px #ecf0f2; }
         }
-        .cs-monitor-stand { width: 19%; height: 4em; margin: 0 auto; background: linear-gradient(#8d999b, #dbe0df); clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%); }
-        .cs-monitor-base { width: 35%; height: 0.65em; margin: 0 auto; background: linear-gradient(#edf0ef, #9da9ac); border-radius: 50% 50% 0.2em 0.2em; box-shadow: 0 0.8em 1.2em #0b2029; }
+        .cs-monitor-stand { width: 18%; height: 4em; margin: 0 auto; background: linear-gradient(#78858d, #c3cdd1 45%, #e3e9ec); clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%); }
+        .cs-monitor-base { width: 33%; height: 0.55em; margin: 0 auto; background: linear-gradient(#f6f8f9, #a6b1b7); border-radius: 50% 50% 0.2em 0.2em; box-shadow: 0 0.8em 1.2em #0b2029; }
 
         .cs-phone {
-            width: 21%;
-            padding: 0.9em 0.3em 0.5em;
+            width: 25%;
+            padding: 0.32em;
             position: absolute;
-            bottom: 5%;
+            bottom: 3%;
             left: 0;
-            border: 0.24em solid #303e42;
-            border-radius: 1.2em;
-            background: #f8f7f0;
-            box-shadow: 0.7em 0.7em 1.5em rgba(0, 0, 0, 0.25);
-            color: #294b40;
+            z-index: 2;
+            border: 0.16em solid #a9a59e;
+            border-radius: 2.05em;
+            background: #080a0c;
+            box-shadow: inset 0 0 0 0.12em #333432, 0 0 0 0.07em #525451, 0.7em 1em 1.8em rgba(0, 0, 0, 0.35);
+
+            &:before, &:after {
+                content: "";
+                width: 0.16em;
+                position: absolute;
+                border-radius: 0.1em;
+                background: linear-gradient(90deg, #6c6d68, #c5c3bb);
+            }
+            &:before { height: 2.2em; top: 5em; left: -0.27em; box-shadow: 0 2.7em #969790; }
+            &:after { height: 3.3em; top: 7em; right: -0.27em; }
         }
-        .cs-phone-speaker { width: 30%; height: 0.2em; position: absolute; top: 0.3em; left: 35%; border-radius: 1em; background: #303e42; }
-        .cs-phone-logo { padding: 0.5em 0.4em 1em; display: flex; justify-content: space-between; font-family: Georgia, serif; font-size: 0.5em; letter-spacing: 0.08em; }
-        .cs-phone-photo { height: 5em; overflow: hidden; img { width: 100%; height: 100%; object-fit: cover; } }
-        .cs-phone-copy { padding: 0.8em 0.5em; display: flex; flex-direction: column; gap: 0.3em; }
-        .cs-phone-copy > span:first-child { margin-bottom: 0.25em; font-family: Georgia, serif; font-size: 1em; line-height: 1.05; }
-        .cs-phone-line { height: 0.12em; width: 92%; background: #ccd3c7; }
-        .cs-phone-line:nth-of-type(3) { width: 65%; }
-        .cs-phone-button { margin-top: 0.8em; padding: 0.9em 0.5em; background: #294b40; color: #fff; text-align: center; font-size: 0.35em; }
+
+        .cs-phone-screen {
+            aspect-ratio: 390 / 844;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.6em;
+            background: #f7f7f7;
+        }
+
+        .cs-phone-status {
+            height: 1.85em;
+            padding: 0 0.65em;
+            flex: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #111;
+
+            > span:first-child { font-size: 0.52em; font-weight: 700; }
+            svg { width: 1.65em; height: 0.6em; }
+        }
+
+        .cs-phone-island {
+            width: 30%;
+            height: 0.82em;
+            position: absolute;
+            top: 0.5em;
+            left: 35%;
+            border-radius: 1em;
+            background: #050608;
+
+            &:after { content: ""; width: 0.32em; height: 0.32em; position: absolute; top: 0.25em; right: 0.3em; border-radius: 50%; background: #112230; box-shadow: inset 0 0 0 0.08em #0b121b; }
+        }
+
+        .cs-phone-website { width: 100%; min-height: 0; flex: 1; display: block; object-fit: cover; object-position: top; }
+
+        .cs-phone-home {
+            height: 0.95em;
+            flex: none;
+            display: grid;
+            place-items: center;
+            background: #fff;
+
+            span { width: 36%; height: 0.16em; border-radius: 1em; background: #18191a; }
+        }
 
         .cs-code-note {
             position: absolute;
@@ -346,7 +389,7 @@
 
 @media only screen and (min-width: 48rem) {
     #hero-1803 {
-        padding: 12rem 2rem 5rem;
+        padding: 13rem 2rem 5rem;
         .cs-topper { font-size: 0.75rem; }
         .cs-title { max-width: 13ch; }
         .cs-text { font-size: 1.0625rem; }
@@ -516,7 +559,7 @@
 			width: 100%;
 			/* prevents padding from affecting height and width */
 			box-sizing: border-box;
-			padding: (20/16rem) (16/16rem);
+			padding: (20/16rem) 0;
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
@@ -524,8 +567,7 @@
 		}
 
 		.cs-logo {
-			width: auto;
-			height: (40/16rem);
+			/* Inherit shared logo dimensions from root.less. */
 			margin: 0 auto 0 0;
 			/* prevents padding from affecting height and width */
 			box-sizing: border-box;
@@ -536,12 +578,6 @@
 			order: 1;
 			z-index: 10;
 
-			img {
-				width: auto;
-				height: 100%;
-				/* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
-				object-fit: contain;
-			}
 		}
 
 		.cs-nav {
@@ -1109,9 +1145,8 @@
 			width: 100%;
 			max-width: (1280/16rem);
 			margin: auto;
-			/* prevents padding from affectin gheight */
+			/* prevents padding from affecting height */
 			box-sizing: border-box;
-			padding: 0 (16/16rem);
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
@@ -1124,8 +1159,7 @@
 		}
 
 		.cs-logo {
-			/* 40px - 44px */
-			height: clamp(2.5rem, 4vw, 2.75rem);
+			/* Inherit shared logo dimensions from root.less. */
 			/* margin-right auto pushes everything away from it to the right */
 			margin: 0 auto 0 0;
 			padding: 0;
@@ -1134,12 +1168,6 @@
 			align-items: center;
 			z-index: 100;
 
-			img {
-				width: auto;
-				height: 100%;
-				/* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
-				object-fit: contain;
-			}
 		}
 
 		.cs-ul {
@@ -1149,7 +1177,6 @@
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
-			gap: (48/16rem);
 		}
 
 		.cs-li {
